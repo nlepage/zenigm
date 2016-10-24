@@ -1,0 +1,12 @@
+{
+  "name": "zenigm",
+  "version": "1.0.0",
+  "description": "Enigme virtuelle agence Zenika Nantes",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Nicolas Lepage",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

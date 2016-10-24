@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigme Zenika Nantes</title>
+  <link rel="stylesheet" href="https://cdn.pannellum.org/2.2/pannellum.css"/>
+  <script type="text/javascript" src="https://cdn.pannellum.org/2.2/pannellum.js"></script>
+  <style>
+  #panorama {
+    min-height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  </style>
+</head>
+<body>
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {
+  default: {
+    firstScene: 'pallier',
+    sceneFadeDuration: 1000,
+    autoLoad: true,
+    hfov: 120,
+    yaw: 10,
+    pitch: -10
+  },
+  scenes: {
+    pallier: {
+      title: 'Pallier',
+      type: 'equirectangular',
+      panorama: 'pallier.jpg',
+      hotSpots: [
+        {
+          pitch: -5,
+          yaw: 0,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir1',
+          targetYaw: 90,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    },
+    couloir1: {
+      title: 'Couloir',
+      type: 'equirectangular',
+      panorama: 'couloir1.jpg',
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -96,
+          type: 'scene',
+          text: 'Pallier',
+          sceneId: 'pallier',
+          targetYaw: 180,
+          targetPitch: -10,
+          targetHfov: 120
+        },
+        {
+          pitch: 0,
+          yaw: 90,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir2',
+          targetYaw: 45,
+          targetPitch: -10,
+          targetHfov: 120
+        },
+        {
+          pitch: 0,
+          yaw: 5,
+          type: 'scene',
+          text: 'Cuisine',
+          sceneId: 'cuisine',
+          targetYaw: 140,
+          targetPitch: -10,
+          targetHfov: 120
+        },
+        {
+          pitch: 0,
+          yaw: -160,
+          type: 'scene',
+          text: 'Salle Naboo',
+          sceneId: 'naboo',
+          targetYaw: 120,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    },
+    couloir2: {
+      title: 'Couloir',
+      type: 'equirectangular',
+      panorama: 'couloir2.jpg',
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -140,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir1',
+          targetYaw: -90,
+          targetPitch: -10,
+          targetHfov: 120
+        },
+        {
+          pitch: 0,
+          yaw: 75,
+          type: 'scene',
+          text: 'Salon',
+          sceneId: 'salon',
+          targetYaw: 0,
+          targetPitch: -10,
+          targetHfov: 120
+        },
+        {
+          pitch: 0,
+          yaw: -32,
+          type: 'scene',
+          text: 'Salle Tatooine',
+          sceneId: 'tatooine',
+          targetYaw: 90,
+          targetPitch: -10,
+          targetHfov: 120
+        },
+        {
+          pitch: 0,
+          yaw: -60,
+          type: 'scene',
+          text: 'Salle de bain',
+          sceneId: 'sdb',
+          targetYaw: 0,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    },
+    cuisine: {
+      title: 'Cuisine',
+      type: 'equirectangular',
+      panorama: 'cuisine.jpg',
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -62,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir1',
+          targetYaw: 180,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    },
+    naboo: {
+      title: 'Salle Naboo',
+      type: 'equirectangular',
+      panorama: 'naboo.jpg',
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -75,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir1',
+          targetYaw: 10,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    },
+    salon: {
+      title: 'Salon',
+      type: 'equirectangular',
+      panorama: 'salon.jpg',
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: 180,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir2',
+          targetYaw: -60,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    },
+    tatooine: {
+      title: 'Salle Tatooine',
+      type: 'equirectangular',
+      panorama: 'tatooine.jpg',
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -50,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir2',
+          targetYaw: -150,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    },
+    sdb: {
+      title: 'Salle de bain',
+      type: 'equirectangular',
+      panorama: 'sdb.jpg',
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: 180,
+          type: 'scene',
+          text: 'Couloir',
+          sceneId: 'couloir2',
+          targetYaw: 130,
+          targetPitch: -10,
+          targetHfov: 120
+        }
+      ]
+    }
+  }
+});
+</script>
+</body>
+</html>
